@@ -115,7 +115,13 @@ def sphere_volume_numba(n:int, d:int)->float:
 # time3: 7.6152 sec
 # volume3: 1.964
 
-
+# In Linux:
+# Parallel time1: 1.2096 sec
+# Sequential time1: 10.9958 sec
+# Parallel time2: 1.2217 sec
+# Sequential time2: 10.8301 sec
+# Parallel time3: 1.2703 sec
+# Sequential time3: 10.6989 sec
 
 def sphere_volume_parallel(n, d, np=10):
     n_np = n // np
