@@ -115,7 +115,9 @@ def sphere_volume_numba(n:int, d:int)->float:
 # time3: 7.6152 sec
 # volume3: 1.964
 
-def sphere_volume_parallel(n, d, np=2):
+
+
+def sphere_volume_parallel(n, d, np=10):
     n_np = n // np
     tasks = []
     V = []
@@ -172,12 +174,18 @@ if __name__ == '__main__':
     n = 1_000_000
     d = 11
 
-    start = pc()
+    start1 = pc()
     V = sphere_volume_parallel(n, d)
-    stop = pc()
+    stop1 = pc()
+
+    start2 = pc()
+    V = sphere_volume(n, d)
+    stop2 = pc()
 
     print(f"Parallel volume: {V}")
-    print(f"Parallel time: {stop-start} sec")
+    print(f"Parallel time: {stop1-start1} sec")
+    print(f"Sequential time: {stop2-start2} sec")
+
     
     main()
     
