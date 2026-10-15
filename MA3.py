@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 """ MA3.py
 
 Student:Thilia Lindh Seger
-Mail: thilia.lindh-seger@3653.uu.se
+Mail: thilia.lindh-seger.3653@student.uu.se
 Reviewed by:
 Date reviewed:
 
